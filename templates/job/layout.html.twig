@@ -1,0 +1,18 @@
+ {% extends ['base.html.twig'] %}
+ {% block title %}{{parent()}}-Layout{% endblock %}
+
+{% block titre %}{{ parent() | upper}}-Layout{% endblock %}
+
+{% block body %}
+<div id="menu" class="col-md-3">
+{{ render (controller('App\\Controller\\JobController::menu'))}}
+ 
+</div>
+<div id="content" class="col-md-9">
+<p>
+  vous etes dans la partie Job </p>
+{% block job_body %}
+{% endblock %}
+</div>
+{% endblock %}
+ 

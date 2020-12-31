@@ -1,0 +1,17 @@
+{% extends "job/layout.html.twig" %}
+
+{% block title %}
+{{ parent()}}-suppression
+{% endblock %}
+{% block titre %}
+{{ parent() | upper}}-supprimer un job
+{% endblock %}
+
+{% block job_body %}
+<h2> bonjour</h2>
+<p> vous etes sur le point de supprimer le job ayant l'id{{id}}</p>
+
+{% endblock %}
+  {% block styl %} 
+<link rel="stylesheet" href="{{ asset('css/teste.css') }}" /> 
+  {% endblock %}

@@ -1,0 +1,8 @@
+index:
+    path: /
+    controller: App\Controller\JobController::index
+index2:
+    path: /walid
+    controller: App\Controller\JobController::layout
+    
+ 

@@ -1,0 +1,17 @@
+
+{% extends "job/layout.html.twig" %}
+
+{% block title %}
+{{ parent()}}-Ajout
+{% endblock %}
+  {% block styl %} 
+<link rel="stylesheet" href="{{ asset('css/teste.css') }}" /> 
+  {% endblock %}
+{% block titre %}
+{{ parent() | upper}}-Ajouter un job
+{% endblock %}
+
+{% block job_body %}
+{{  include ("job/form.html.twig") }}
+
+{% endblock %}

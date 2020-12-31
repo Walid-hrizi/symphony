@@ -1,0 +1,10 @@
+<ul class="nav nav-pills nav-stacked">
+{% for job in listJobs %}
+<li>
+<a href ="{{ path ('voir', {'id': job.id})}}">
+{{job.intitule}}
+</a>
+</li>
+{% endfor %}
+
+</ul>

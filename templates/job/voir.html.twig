@@ -1,0 +1,31 @@
+{% extends "job/layout.html.twig" %}
+  {% block styl %}
+  {{parent()}} 
+<link rel="stylesheet" href="{{ asset('css/supprimer.css') }}" /> 
+  {% endblock %}
+{% block title %}
+{{ parent()}}-Voir
+{% endblock %}
+{% block titre %}
+{{ parent() | upper}}-voir un job
+{% endblock %}
+
+{% block job_body %}
+{% for message in app.flashes('notice')%}
+<div class="fash-inf" style="color:red">
+{{message}}
+</div>
+{% endfor %}}
+<h1> Bonjour</h1>
+<h2>Details du job ayant l'id:{{job.id}}<h2>
+<h3>intitule:{{job.title}}<h3>
+<h3>Description:{{job.Description}}<h3>
+<h3>Details du job ayant l'id:{{job.company}}<h3>
+{% if job.image is not null %}
+<h3>Image</h3>
+<img src="{{job.image.url}}" alt="{{job.image.alt}}" height ="100">
+{% endif %}
+
+{% endblock %}
+ 
+
