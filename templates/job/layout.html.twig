@@ -1,5 +1,6 @@
  {% extends ['base.html.twig'] %}
- {% block title %}{{parent()}}-Layout{% endblock %}
+ {% block
+  title %}{{parent()}}-Layout{% endblock %}
 
 {% block titre %}{{ parent() | upper}}-Layout{% endblock %}
 
@@ -10,7 +11,7 @@
 </div>
 <div id="content" class="col-md-9">
 <p>
-  vous etes dans la partie Jobs </p>
+  vous etes dans la partie Jobss </p>
 {% block job_body %}
 {% endblock %}
 </div>
